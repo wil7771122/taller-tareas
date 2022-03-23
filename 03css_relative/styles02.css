@@ -15,7 +15,7 @@ div {
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
-  background-color: #ff6e6c;
+  background-color: rgb(246, 106, 106);
 }
 .box-1 {
   position: relative;
@@ -24,6 +24,5 @@ div {
 .box-2 {
   position: relative;
   top: 50px;
-  background-color: blue;
-  border-radius: 50%;
+  border-radius: 20%;
 }
