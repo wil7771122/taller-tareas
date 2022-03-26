@@ -1,0 +1,179 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function miFuncion() {
+        document.getElementById("demos").innerHTML = "Parrafo cambiado.";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Uno de los muchos métodos HTML de JavaScript es getElementById().
+    El siguiente ejemplo "busca" un elemento HTML (con id="demo") y cambia el contenido del elemento (innerHTML) a "Hello JavaScript": -->
+    <h2>Que puedo hacer con javascript</h2>
+    <p id="demo">Javascript puede cambiar el contenido html.</p>
+    <button
+      type="button"
+      onclick='document.getElementById("demo").innerHTML="hola java script!"'
+    >
+      Haz click en mi
+    </button>
+
+    <!-- En este ejemplo, JavaScript cambia el valor del srcatributo (fuente) de una <img>etiqueta:  -->
+    <p>
+      en este caso javascript cambia los valores src(source) a un atributo de
+      una imagen
+    </p>
+    <button onclick="document.getElementById('miImagen').src='pic_bulboff.gif'">
+      Prender la luz
+    </button>
+    <img
+      id="miImagen"
+      src="/08javascript/images/pic_bulboff.gif"
+      style="width: 100px"
+    />
+    <button onclick="documemt.getElementById('miImagen').src='pic_bulboff.gif'">
+      Apagar la luz
+    </button>
+
+    <!-- Cambiar el estilo de un elemento HTML es una variante de cambiar un atributo HTML: -->
+    <h2>que ouedo hacer con javascript</h2>
+    <p id="demo1">javascript puede cambiar el estilo de un elemento html</p>
+    <button
+      type="boton"
+      onclick="document.getElementById('demo1').style.fontSize='45px'"
+    >
+      Presioname
+    </button>
+
+    <!-- Se pueden ocultar elementos HTML cambiando el display estilo: -->
+    <p id="demoOcultar">javascript puede ocultar elementos html</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demoOcultar').style.display='none'"
+    >
+      Presioname
+    </button>
+
+    <!-- En HTML, el código JavaScript se inserta entre las etiquetas <script>y .</script> -->
+    <h2>Javascript en el cuerpo o body</h2>
+    <p id="demostracion"></p>
+    <script>
+      document.getElementById("demostracion").innerHTML =
+        "Mi primer javascript";
+    </script>
+
+    <!-- Funciones y eventos de JavaScript
+    Un JavaScript functiones un bloque de código JavaScript, que se puede ejecutar cuando se "llama".
+    
+    Por ejemplo, se puede llamar a una función cuando ocurre un evento , como cuando el usuario hace clic en un botón. -->
+    <!-- JavaScript en <head> o <body>
+        Puede colocar cualquier número de secuencias de comandos en un documento HTML.
+        
+        Los scripts se pueden colocar en el <body>, o en la <head>sección de una página HTML, o en ambos. -->
+    <h2>Demostracion de javascript en la cabecera</h2>
+    <p id="demos">un parrafo</p>
+    <button type="button" onclick="miFuncion()">Intentalo</button>
+
+    <!-- JavaScript en <cuerpo>
+        functionEn este ejemplo, se coloca un JavaScript en la <body>sección de una página HTML.
+        
+        La función se invoca (llama) cuando se hace clic en un botón: -->
+    <h2>Demostracion de javascript en el cuerpo</h2>
+    <p id="demoss">Un parrafo</p>
+    <button type="button" onclick="miFuncion2()">Intentalo</button>
+    <script>
+      function miFuncion2() {
+        document.getElementById("demoss").innerHTML = "Parrafo cambiado";
+      }
+    </script>
+
+    <!-- JavaScript externo
+        Los scripts también se pueden colocar en archivos externos: -->
+    <h2>Demostracion con javascript externo</h2>
+    <p id="demost">Esto es un parrafo</p>
+    <button type="button" onclick="miFuncion3()">
+      Presioname javascript externo
+    </button>
+    <p>Este ejemplo enlasa con un script externo</p>
+    <p>(myFunction se almacena en "myScript.js")</p>
+    <img
+      src="/08javascript/images/Captura de pantalla 2022-03-25 201638.png"
+      alt="rutas"
+      width="250"
+      height="250"
+    />
+    <script src="myScript.js"></script>
+
+    <!-- Uso de HTML interno
+    Para acceder a un elemento HTML, JavaScript puede usar el document.getElementById(id)método.  
+El idatributo define el elemento HTML. La innerHTML propiedad define el contenido HTML: -->
+    <h2>Mi primera pagina</h2>
+    <p>Mi primer parrafo</p>
+
+    <p id="demoo"></p>
+    <!-- Cambiar la propiedad innerHTML de un elemento HTML es una forma común de mostrar datos en HTML. -->
+    <script>
+      document.getElementById("demoo").innerHTML = 5 + 6;
+    </script>
+
+    <!-- Usando documento.escribir()
+Para fines de prueba, es conveniente utilizar document.write():
+El uso de document.write() después de cargar un documento HTML, eliminará todo el HTML existente : -->
+    <h2>metodo document.write</h2>
+    <p>borra todo despues de cargar eliminara todo</p>
+    <button type="button" onclick="document.write(5+6)">Borrar y sumar</button>
+
+    <!-- Usando ventana.alerta() -->
+    <h2>Metodo window.alert()</h2>
+    <p>
+      En JavaScript, el objeto de ventana es el objeto de alcance global, lo que
+      significa que las variables, propiedades y métodos pertenecen por defecto
+      al objeto de ventana. Esto también significa que especificar la
+      windowpalabra clave es opcional:
+    </p>
+    <script>
+      alert(5 + 6);
+    </script>
+
+    <!-- Para fines de depuración, puede llamar al console.log()método en el navegador para mostrar datos. -->
+    <p>F12 on your keyboard will activate debugging.</p>
+    <p>Then select "Console" in the debugger menu.</p>
+    <p>Then click Run again.</p>
+
+    <script>
+      console.log(5 + 6);
+    </script>
+
+    <!-- Imprimir JavaScript
+JavaScript no tiene ningún objeto de impresión o métodos de impresión.
+
+No puede acceder a los dispositivos de salida desde JavaScript.
+
+La única excepción es que puede llamar al window.print()método en el navegador para imprimir el contenido de la ventana actual. -->
+    <h2>metodo window.print</h2>
+    <p>presiona el boton para imprimir el contenido de la materia</p>
+    <button type="button" onclick="window.print()">Imprimir esta pagina</button>
+
+    <!-- declaraciones en javascript -->
+    <h2>declaraciones en javascript</h2>
+    <p>
+      A <b> Un progrma de javascript </b> es una lista de<b>declaraciones</b>
+      para ser ejecutado por una computadora
+    </p>
+
+    <p id="resultado"></p>
+
+    <script>
+      let x, y, z;
+      x = 5;
+      y = 10;
+      z = x + y;
+
+      document.getElementById("resultado").innerHTML="El valor de z es " + z + ".";
+    </script>
+  </body>
+</html>

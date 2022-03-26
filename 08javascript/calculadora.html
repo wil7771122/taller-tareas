@@ -76,10 +76,15 @@
     </div>
     <script>
       escribir("*");
-      function escribir(simbolo)
-         
-          { var pantalla = document.getElementById("pantalla");
-          datosDePantalla = pantalla.getAttribute("value")}
+      function escribir(simbolo) {
+        var pantalla = document.getElementById("pantalla");
+        datosDePantalla = pantalla.getAttribute("value");
+        if (datosDePantalla == null) {
+          datosDePantalla = "";
+        }
+        datosDePantalla = datosDePantalla + simbolo;
+        pantalla.setAttribute("value", datosDePantalla);
+      }
     </script>
   </body>
 </html>
